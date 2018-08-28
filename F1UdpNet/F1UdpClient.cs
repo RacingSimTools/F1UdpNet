@@ -58,25 +58,30 @@ namespace F1UdpNet
         {
             byte[] arr = result.Buffer;
 
-            PacketHeader header = MarshalType<PacketHeader>(arr);
+            //PacketHeader header = MarshalType<PacketHeader>(arr);
 
-            switch ((e_PacketId)header.m_packetId)
+            switch (arr.Length)
             {
-                case e_PacketId.Motion:
+                case 1341:
                     return MarshalType<PacketMotionData>(arr);
-                case e_PacketId.Session:
+                case 147:
                     return MarshalType<PacketSessionData>(arr);
-                case e_PacketId.LapData:
-                    return MarshalType<PacketLapData>(arr);
-                case e_PacketId.Event:
+                case 841:
+                    if (arr[4] == 2)
+                    {
+                        return MarshalType<PacketCarSetupData>(arr);
+                    }
+                    else
+                    {
+                        return MarshalType<PacketLapData>(arr);
+                    }
+                case 25:
                     return MarshalType<PacketEventData>(arr);
-                case e_PacketId.Participants:
+                case 1082:
                     return MarshalType<PacketParticipantsData>(arr);
-                case e_PacketId.CarSetups:
-                    return MarshalType<PacketCarSetupData>(arr);
-                case e_PacketId.CarTelemetry:
+                case 1085:
                     return MarshalType<PacketCarTelemetryData>(arr);
-                case e_PacketId.CarStatus:
+                case 1061:
                     return MarshalType<PacketCarStatusData>(arr);
                 default:
                     return null;

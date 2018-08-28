@@ -26,6 +26,7 @@ namespace Tests
             IObserver<IF1Packet> observer = Observer
                 .Create<IF1Packet>(output =>
                 {
+                    Console.WriteLine(output.Header.m_sessionTime);
                     if ((e_PacketId)output.Header.m_packetId == e_PacketId.CarTelemetry)
                     {
                         var casted = (PacketCarTelemetryData)output;
