@@ -11,11 +11,13 @@ namespace F1UdpNet
 {
     using System;
     using System.Collections.Generic;
+    using System.Runtime.InteropServices;
     using System.Text;
 
     /// <summary>
     /// Lap data for a car.
     /// </summary>
+    [StructLayout(LayoutKind.Sequential, Pack = 1)]
     public struct LapData
     {
         /// <summary>

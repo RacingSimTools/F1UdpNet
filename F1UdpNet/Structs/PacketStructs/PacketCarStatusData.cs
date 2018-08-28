@@ -18,6 +18,7 @@ namespace F1UdpNet
     /// This packet details car statuses for all the cars in the race.
     /// It includes values such as the damage readings on the car.
     /// </summary>
+    [StructLayout(LayoutKind.Sequential, Pack = 1)]
     public struct PacketCarStatusData : IF1Packet
     {
         /// <summary>

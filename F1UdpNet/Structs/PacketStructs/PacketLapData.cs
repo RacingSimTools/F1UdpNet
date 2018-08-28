@@ -17,6 +17,7 @@ namespace F1UdpNet
     /// <summary>
     /// Lap details of all the cars in the session.
     /// </summary>
+    [StructLayout(LayoutKind.Sequential, Pack = 1)]
     public struct PacketLapData : IF1Packet
     {
         /// <summary>

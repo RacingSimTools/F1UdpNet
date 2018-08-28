@@ -17,6 +17,7 @@ namespace F1UdpNet
     /// <summary>
     /// Telemetry of a car.
     /// </summary>
+    [StructLayout(LayoutKind.Sequential, Pack = 1)]
     public struct CarTelemetryData
     {
         /// <summary>

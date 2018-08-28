@@ -15,6 +15,7 @@ namespace F1UdpNet
     ///  There is additional data for the car being driven with the goal of being
     ///  able to drive a motion platform setup.
     /// </summary>
+    [StructLayout(LayoutKind.Sequential, Pack = 1)]
     public struct PacketMotionData : IF1Packet
     {
         // N.B. For the normalised vectors below, to convert to float values divide by 32767.0f.

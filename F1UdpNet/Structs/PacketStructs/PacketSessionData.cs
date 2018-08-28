@@ -16,6 +16,7 @@ namespace F1UdpNet
     /// <summary>
     /// The session packet includes details about the current session in progress
     /// </summary>
+    [StructLayout(LayoutKind.Sequential, Pack = 1)]
     public struct PacketSessionData : IF1Packet
     {
         /// <summary>

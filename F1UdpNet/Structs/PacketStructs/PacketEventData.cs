@@ -17,6 +17,7 @@ namespace F1UdpNet
     /// <summary>
     /// Details of events that happen during the course of the race.
     /// </summary>
+    [StructLayout(LayoutKind.Sequential, Pack = 1)]
     public struct PacketEventData : IF1Packet
     {
         /// <summary>

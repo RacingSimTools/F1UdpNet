@@ -29,6 +29,7 @@ namespace F1UdpNet
     /// otherwise it will be the driver name.
     /// </para>
     /// </summary>
+    [StructLayout(LayoutKind.Sequential, Pack = 1)]
     public struct ParticipantData
     {
         /// <summary>

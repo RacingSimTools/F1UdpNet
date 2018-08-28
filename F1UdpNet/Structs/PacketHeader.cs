@@ -11,11 +11,13 @@ namespace F1UdpNet
 {
     using System;
     using System.Collections.Generic;
+    using System.Runtime.InteropServices;
     using System.Text;
 
     /// <summary>
     /// Header of every packet.
     /// </summary>
+    [StructLayout(LayoutKind.Sequential,Pack=1)]
     public struct PacketHeader
     {
         /// <summary>

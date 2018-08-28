@@ -11,11 +11,13 @@ namespace F1UdpNet
 {
     using System;
     using System.Collections.Generic;
+    using System.Runtime.InteropServices;
     using System.Text;
 
     /// <summary>
     /// Structure of a marshal zone.
     /// </summary>
+    [StructLayout(LayoutKind.Sequential, Pack = 1)]
     public struct MarshalZone
     {
         /// <summary>

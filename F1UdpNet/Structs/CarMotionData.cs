@@ -9,10 +9,12 @@
 namespace F1UdpNet
 {
     using System;
+    using System.Runtime.InteropServices;
 
     /// <summary>
     /// Motion data of all the cars.
     /// </summary>
+    [StructLayout(LayoutKind.Sequential, Pack = 1)]
     public struct CarMotionData
     {
         // N.B. For the normalised vectors below, to convert to float values divide by 32767.0f.

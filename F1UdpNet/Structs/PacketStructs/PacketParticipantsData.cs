@@ -17,6 +17,7 @@ namespace F1UdpNet
     /// <summary>
     /// This is a list of participants in the race. 
     /// </summary>
+    [StructLayout(LayoutKind.Sequential, Pack = 1)]
     public struct PacketParticipantsData : IF1Packet
     {
         /// <summary>

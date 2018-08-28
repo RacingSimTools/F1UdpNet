@@ -17,6 +17,7 @@ namespace F1UdpNet
     /// <summary>
     /// Car status of a car in the race.
     /// </summary>
+    [StructLayout(LayoutKind.Sequential, Pack = 1)]
     public struct CarStatusData
     {
         /// <summary>

@@ -19,6 +19,7 @@ namespace F1UdpNet
     /// Note that in multiplayer games, other player cars will appear as blank,
     /// you will only be able to see your car setup and AI cars.
     /// </summary>
+    [StructLayout(LayoutKind.Sequential, Pack = 1)]
     public struct PacketCarSetupData : IF1Packet
     {
 

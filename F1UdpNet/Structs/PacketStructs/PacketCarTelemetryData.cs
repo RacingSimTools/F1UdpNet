@@ -19,6 +19,7 @@ namespace F1UdpNet
     /// It details various values that would be recorded on the car such as speed, 
     /// throttle application, DRS etc.
     /// </summary>
+    [StructLayout(LayoutKind.Sequential, Pack = 1)]
     public struct PacketCarTelemetryData : IF1Packet
     {
         /// <summary>
